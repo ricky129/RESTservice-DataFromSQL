@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Specifying the Hibernate dialect for MySQL 8 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- MySQL JDBC driver class -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Database connection URL -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/miodb?useSSL=false&amp;serverTimezone=UTC</property>
+
+        <!-- Database connection username -->
+        <property name="hibernate.connection.username">root</property>
+
+        <!-- Database connection password -->
+        <property name="hibernate.connection.password">;2=BRhi*LoRI</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Update the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Optional: Hibernate format SQL -->
+        <property name="hibernate.format_sql">true</property>
+		
+		<!-- Mapping per la classe Utente -->
+		<mapping class="com.esempio.demo.Utente"/>
+    </session-factory>
+</hibernate-configuration>
