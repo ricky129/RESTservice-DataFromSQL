@@ -23,7 +23,6 @@ public class HelloWorldController {
     @GetMapping("/")
     public String getUsers() {
         String output = null;
-        ArrayList<Map<String, Object>> ret = new ArrayList<>();
         // Database credentials
         String jdbcUrl = "jdbc:mysql://localhost:3306/miodb";
         String username = "root";
@@ -59,7 +58,6 @@ public class HelloWorldController {
             Gson gson = new Gson();
             String jsonOutput = gson.toJson(userList);
             output = jsonOutput;
-            ret = userList;
 
         } catch (SQLException e) {
             e.printStackTrace();
